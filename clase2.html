@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Planetario</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"> </script>
+</head>
+
+<body>
+    <a-scene background="color:#000000">
+        <!-- CAMERA-->
+        <a-entity position="0 0 15">
+            <a-camera></a-camera>
+        </a-entity>
+
+
+
+        <!--SOL -->
+        <a-entity>
+            <a-sphere position="0 0 0" radius="2"  src="https://cdn.glitch.com/850dd813-e5e9-4dd0-9751-38981ae74172%2Fsol.jpg?v=1604296185621"> </a-sphere>
+        </a-entity>
+
+
+        <!--Mercurio-->
+        <a-entity position="0 0 0" rotation="0 0 0"
+            animation="property: rotation; to: 0 360 0;easing:linear; loop: true; dur: 20000">
+            <a-sphere position="1  0 -5" radius="0.2" src="https://cdn.glitch.com/850dd813-e5e9-4dd0-9751-38981ae74172%2Fmercurio.jpg?v=1604298142259"></a-sphere>
+        </a-entity>
+
+        <!--Venus-->
+        <a-entity position="0 0 0" rotation="0 0 0"
+        animation="property: rotation; to: 0 360 0;easing:linear; loop: true; dur: 25000">
+        <a-sphere position="3  0 -5" radius="0.3" src="https://cdn.glitch.com/850dd813-e5e9-4dd0-9751-38981ae74172%2Fvenus.jpg?v=1604312437571"></a-sphere>
+        </a-entity>
+
+        <!--Tierra-->
+        <a-entity position="0 0 0" rotation="0 0 0"
+        animation="property: rotation; to: 0 360 0;easing:linear; loop: true; dur: 30000">
+        <a-sphere position="5  0 -5" radius="0.4" src="https://cdn.glitch.com/850dd813-e5e9-4dd0-9751-38981ae74172%2Fearth.jpg?v=1604312404511">
+               <a-entity position="0 0 0 " rotation="0 0 0" animation="property: rotation; to: 0 360 0;easing:linear; loop: true; dur: 30000"  >
+                
+                   <a-sphere color="white" position="1 0 0" radius="0.18" src="https://st2.depositphotos.com/4413287/43249/i/450/depositphotos_432492564-stock-illustration-abstract-watercolor-styled-background-copy.jpg"></a-sphere>
+               </a-entity>
+
+
+        </a-sphere>
+        </a-entity>
+
+   
+
+        <!--Marte-->
+        <a-entity position="0 0 0" rotation="0 0 0"
+        animation="property: rotation; to: 0 360 0;easing:linear; loop: true; dur: 35000">
+        <a-sphere position="7  0 -5" radius="0.35" src="https://thumbs.dreamstime.com/b/superficie-de-marte-52569065.jpg"></a-sphere>
+        </a-entity>
+
+        <!--Jupiter-->
+        <a-entity position="0 0 0" rotation="0 0 0"
+        animation="property: rotation; to: 0 360 0;easing:linear; loop: true; dur: 40000">
+        <a-sphere position="9  0 -5" radius="1.2" src="https://cdn.glitch.com/850dd813-e5e9-4dd0-9751-38981ae74172%2Fjupiter.jpg?v=1604312404561"></a-sphere>
+        </a-entity>
+
+
+        <!--Saturno-->
+        <a-entity position="0 0 0" rotation="0 0 0"
+        animation="property: rotation; to: 0 360 0;easing:linear; loop: true; dur: 45000">
+        <a-sphere position="11  0 -5" radius="0.9" src="https://cdn.glitch.com/850dd813-e5e9-4dd0-9751-38981ae74172%2Fsaturn.png?v=1604312433927">
+               <a-torus color="red" radius="1.5"  rotation="90 0 0" radius-tubular="0.02" segments-tubular="1000"></a-torus>
+               <a-torus color="red" radius="1.8"  rotation="90 0 0" radius-tubular="0.025" segments-tubular="1000"></a-torus>
+               <a-torus color="red" radius="2.1"  rotation="90 0 0" radius-tubular="0.03" segments-tubular="1000"></a-torus>
+            </a-sphere>
+       </a-entity>
+
+
+        <!--Urano-->
+        <a-entity position="0 0 0" rotation="0 0 0"
+        animation="property: rotation; to: 0 360 0;easing:linear; loop: true; dur: 50000">
+        <a-sphere position="13  0 -5" radius="0.6" src="assets/misteriosa-textura-urano-resumen-fondo_889432-1302.jpg"></a-sphere>
+        </a-entity>
+
+
+        <!--Neptuno-->
+        <a-entity position="0 0 0" rotation="0 0 0"
+        animation="property: rotation; to: 0 360 0;easing:linear; loop: true; dur: 55000">
+        <a-sphere position="15  0 -5" radius="0.5" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJie-yliPkBPpbpA4SHzlwZmd9EBfitC7OMA&s">
+
+              
+
+        </a-sphere>
+        </a-entity>
+
+
+        <!--Estrellas-->
+
+        <a-entity id="stars">
+
+        </a-entity>
+
+        <!-- Órbitas-->
+
+        <!--Mercurio-->
+        <a-torus color="grey" rotation="90 0 0 " radius="5.1" radius-tubular="0.01" segmets-tubular="1000" > </a-torus>
+
+        <!--Venus-->
+        <a-torus color="grey" rotation="90 0 0 " radius="5.9" radius-tubular="0.01" segmets-tubular="1000" > </a-torus>
+       
+           <!--Tierra-->
+        <a-torus color="grey" rotation="90 0 0 " radius="7.1" radius-tubular="0.01" segmets-tubular="1000" > </a-torus>
+
+            <!--Marte-->
+        <a-torus color="grey" rotation="90 0 0 " radius="8.6" radius-tubular="0.01" segmets-tubular="1000" > </a-torus>
+
+        <a-torus color="grey" rotation="90 0 0 " radius="9.8" radius-tubular="0.01" segmets-tubular="1000" > </a-torus>
+
+        <a-torus color="grey" rotation="90 0 0 " radius="11.8" radius-tubular="0.01" segmets-tubular="1000" > </a-torus>
+
+        <a-torus color="grey" rotation="90 0 0 " radius="13.8" radius-tubular="0.01" segmets-tubular="1000" > </a-torus>
+
+        <a-torus color="grey" rotation="90 0 0 " radius="15.8" radius-tubular="0.01" segmets-tubular="1000" > </a-torus>
+
+
+
+    </a-scene>
+
+  
+    <script>
+          const nStars=100; // Número de estrellas
+          const scene=document.querySelector('a-scene')
+          const starEenty=document.querySelector('#stars')
+
+
+          for (let i=0;i<nStars;i++){
+               const star=document.createElement('a-sphere')
+               const x=Math.random()*50-25;
+               const y=Math.random()*50-25;
+               const z=Math.random()*-50;
+
+               star.setAttribute('position',`${x} ${y} ${z}`)
+               star.setAttribute('radius','0.1')
+               star.setAttribute('color','#FFFFFF')
+
+               star.setAttribute('animation',{
+                property:'position',
+
+               })
+
+
+               starEenty.appendChild(star)
+
+          }
+
+
+
+    </script>
+
+</body>
+
+</html>
