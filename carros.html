@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html>
-   <head>
+
+<head>
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"> </script>
-    <script src="https://cdn.jsdelivr.net/gh/n5ro/aframe-physics-system@v4.0.1/dist/aframe-physics-system.min.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/gh/n5ro/aframe-physics-system@v4.0.1/dist/aframe-physics-system.min.js"></script>
 
     <!-- Enlace del archivo css-->
-     <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
 
 </head>
 
 
-   <body>
+<body>
     <a-scene id="scene" physics="debug=false">
-         
+
         <!--Recursos o assets-->
         <a-assets>
 
@@ -27,20 +29,22 @@
 
 
         <!--Camara-->
-        <a-entity position="0 5 10">
-            <camera></camera>
+        <a-entity id="camera-car" follow-tube="radius:85;speed:0.5">
+            <a-entity camera look-controls wasd-controls="acceleration:50" position="0 0 -85"></a-entity>
         </a-entity>
 
         <!-- Pista básica-->
-         <a-plane position="0 0 0 " rotation="-90 0 0" width="100" height="100" color="#4440F0"></a-plane>
-        
+        <a-plane position="0 0 0 " rotation="-90 0 0" width="100" height="100" color="#4440F0"></a-plane>
 
-         
+        <a-torus position="0 0 0" rotation="-90 0 0" radius="80" radius-tubular="10" 
+                 material="color:#0077FF;opacity:0.5;transparent:true;metalness:0.9;roughness:0.1;shader:standard"></a-torus>
+
+
 
 
     </a-scene>
-     
-   </body>
+
+</body>
 
 
 </html>
